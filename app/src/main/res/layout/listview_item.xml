@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <CheckBox
+
+        android:id="@+id/cb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"
+        android:button="@drawable/checkbox_selector"
+        android:text="text"/>
+
+    <!--android:button="@drawable/checkbox_selector"    设置CheckBox左侧图标样式-->
+
+    <CheckedTextView
+        android:id="@+id/ctv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:text="text"/>
+
+    <!--android:checkMark   设置右侧选择框样式-->
+
+    <!--
+    ?attr表示引用的是当前主题中的资源。
+    ?android:attr/表示引用的是android系统中的一些资源
+    -->
+
+    <!--
+    对style和attr的引用:
+
+1. 当引用平台的style做为style的parent时，“@android:style/主题”  == “@android:主题” ==“   android:style/主题 ”== “android:主题”;
+2. 当引用平台的style作为属性的引用时，“@android:style/主题”；
+3. 当引用自定义style作为其他style的parent时，“@style/主题” == “style/主题” == “主题”;
+4. 当引用自定义style作为其他属性的引用时，“@style/主题”；
+5. 当引用平台属性作为属性的引用时，“?android:attr/属性” == “?android:属性”;
+6. 当引用自定义属性时，“?attr/属性” == “?属性”；
+7. 上述六个情况中，可以在'@'或'？'后加入'*'以引用被隐藏（即平台私有）的资源；
+8. 如果引用平台资源或属性时，可以将“android:”放在斜杠“/”的后面，即，@android:style/主题”== @style/android:主题”,“?android:attr/属性”== “?attr/android:属性”；
+    -->
+</LinearLayout>
